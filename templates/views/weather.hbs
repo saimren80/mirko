@@ -1,0 +1,114 @@
+{{>head}}{{>header}}
+
+
+<style>
+    
+		.main{
+			width: clamp(300px, 420px,500px);
+			height: 200px;
+			margin: 150px auto;
+            background-color: #FFFFF0;
+			box-shadow: 0px 31px 35px -26px #080c21;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: row;
+		}
+
+		.left{
+			margin-top: 20px;
+			padding: 15px;
+		}
+
+		.right{
+
+			margin-top: 35px;
+			margin-right: 5px;
+		}
+
+		.left-img{
+            font-size: 50px;
+		}
+
+		.right-img{
+
+			width: 180px;
+			border-radius: 20px;
+		}
+
+		.date{
+			font-size: 14px;
+			color: rgba(0,0,0,0.5);
+			font-weight: bold;
+		}
+
+		.city{
+			font-size: 21px;
+			color: rgba(0,0,0,0.7);
+			padding-top: 5px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		.tempreture{
+			padding-top: 10px;
+			font-size: 61px;
+			color: rgba(0,0,0,0.9);
+			font-weight: 100;
+		}
+        body{
+            background-color: #0c0f1e;
+        }
+#max_temp{
+    font-size: 16px;
+}
+</style>
+<section class="py-5">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="alert alert-danger d-none" id="alert" role="alert">
+               
+            </div>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form id="fetch_mausam_form">
+                <div class="form-group py-2 d-flex align-items-center justify-content-center">
+                    <input type="text" class="form-control form-control-input" name="search" id="exampleFormControlInput1" placeholder="Enter name">
+                    <button type="submit" class="btn form-control-submit-button d-flex align-items-center justify-content-between"><i class="fas fa-search"></i> Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+<main class="main ">
+
+    <div class="left">
+        <div class="date">
+            <span id="day">Sunday</span>, <span id="date">March 12 2023</span>
+        </div>
+        <div class="city" id="city_name">
+            ALLAHABAD IN
+        </div>
+        <div class="tempreture">
+            <span id="left-img" class="left-img"></span>
+             <span id="max_temp">32.20 °</span>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="city-img">
+            <img id="img_lo" src="https://e1.pxfuel.com/desktop-wallpaper/124/761/desktop-wallpaper-taj-mahal-agra-india-taj-mahal-at-night-3d-thumbnail.jpg"
+                alt="tajmahal" class="right-img" />
+        </div>
+    </div>
+
+</main>
+    
+
+
+{{>footer}}
